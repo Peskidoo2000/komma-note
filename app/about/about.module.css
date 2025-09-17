@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+ 
+  background-color: black !important;
+}
+.about2{
+  width:50%;
+}
+.aboutContainer{
+  width: 95%;
+}
+.aboutTextContainer{
+  display: flex;
+  gap: 30%;
+}
+.phoneContainer {
+  position: relative; /* VERY IMPORTANT: makes .phoneScreen position relative to this */
+}
+
+.Iphone {
+  width: 50%;      /* scales with parent */
+  height: 50%;    /* keeps aspect ratio */
+  display: block;
+  transform: rotate(8deg); /* tilt the phone slightly */
+  transform-origin: center center; 
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.3));
+  position: relative;
+}
+
+.phoneScreen {
+  position: absolute;
+  width: 42%;      /* now 42% of .phoneContainer (same size as phone image) */
+  height: 63%;
+  top: 20%;
+  left: 4%;
+  background-color: white;
+   transform: rotate(8deg); /* tilt the phone slightly */
+  transform-origin: center center; 
+}
+
+.screen{
+  width:100%;
+  height:100%;
+}
+.podiumContainer {
+  position: absolute; /* now absolute relative to .phoneContainer */
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* behind phone */
+}
+
+.podium {
+  width: 60%;  /* scales with phoneContainer width */
+  height: auto;
+  display: block;
+  margin-left: -60%;
+  margin-top: -25%;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.3));
+}
+
+@media (min-width: 689px) {
+  .about2{
+  width:30%;
+}
+
+.aboutTextContainer{
+  display: flex;
+  gap: 50%;
+}
+.podiumContainer {
+  position: absolute; /* now absolute relative to .phoneContainer */
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* behind phone */
+}
+
+.podium {
+  width: 30%;  /* scales with phoneContainer width */
+  height: auto;
+  display: block;
+  margin-left: -60%;
+  margin-top: -13%;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.3));
+}
+.Iphone{
+  width: 40%;      /* scales with parent */
+  height: auto;    /* keeps aspect ratio */
+}
+.phoneScreen {
+  position: absolute;
+  width: 32%;      /* now 42% of .phoneContainer (same size as phone image) */
+  
+  top: 20%;
+  left: 4%;
+  background-color: white;
+   transform: rotate(8deg); /* tilt the phone slightly */
+  transform-origin: center center; 
+}
+}

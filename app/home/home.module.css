@@ -1,0 +1,198 @@
+.homeContainer{
+    width: 95%;
+}
+.greetingsContainer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.getStarted{
+  background-color: rgba(158, 20, 20, 0.4);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.greetings{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#5555;
+    font-size: 1rem;
+  text-align: center;
+}
+.greetings2{
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+    font-size: 1rem;
+  text-align: center;
+}
+.titleInput{
+    background-color: white;
+}
+.notesContainer{
+    display: flex;
+    gap: 20%;
+}
+.savedNotesContainer {
+  background: #212529;
+  color: #fff;
+  padding: 10%;
+  height:auto;
+  position: relative;
+  overflow: visible; /* pseudo elements are outside the box */
+}
+
+/* top-right scoop */
+.savedNotesContainer::before,
+.savedNotesContainer::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: -38px; /* half the width to center the circle over the edge */
+  background: var(--page-bg, black); /* set --page-bg on body if not white */
+  z-index: 2;
+}
+
+/* top */
+.savedNotesContainer::before { top: -20px; right:-20px}
+
+/* bottom */
+.savedNotesContainer::after { bottom: -20px; right:-20px}
+
+.noteCard{
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+}
+
+
+.addNoteButton{
+    width: 80% !important;
+    position:absolute;
+    bottom:-3%;
+    left: -7%;
+    padding: 5px !important;
+    font-size: 0.7em !important;
+    text-align: center;
+    z-index: 4;
+    background: linear-gradient(200deg, #212529 60%, rgba(158, 20, 20, 0.4)  40%);
+    border-top-left-radius: 30px; /* round top-left corner */
+    /* Cut the left side diagonally, but leave top corner rounded */
+    clip-path: polygon(
+    0 30px,    /* just below the rounded corner */
+    30px 0,    /* near top-left */
+    100% 0, 
+    100% 100%, 
+    0 100%
+  );
+}
+
+.inputWrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleY(0.95);
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.noteTitle {
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.noteBody {
+  padding: 5px 10px;
+  background: #2a2a2a;
+  border-left: 3px solid #555;
+  margin-bottom: 10px;
+  transition: opacity 0.2s ease-in;
+}
+
+@media (min-width: 335px) {
+    .addNoteButton{
+    left: -6%;
+    bottom: -4%;
+  } 
+}
+@media (min-width: 374px) {
+  
+    .addNoteButton{
+    left: -6%;
+    bottom: -5%;
+
+  } 
+}
+@media (min-width: 430px) {
+    .greetings, .greetings2{
+        font-size: 1.2rem;
+    }
+    .addNoteButton{
+    left: -2%;
+    bottom: -5%;
+
+  } 
+}
+@media (min-width: 515px) {
+    .addNoteButton{
+    left: 0;
+    bottom: -5%;
+}
+}
+
+@media (min-width: 575px) {
+    .addNoteButton{
+    left: 2%;
+    bottom: -2%;
+}
+}
+@media (min-width: 687px) {
+      .notesContainer{
+    gap: 30%;
+
+  } 
+}
+
+@media (min-width: 767px) {
+      .notesContainer{
+         gap: 30%;
+  } 
+  .addNoteButton{
+    left: 5%;
+    bottom: -4%;
+}
+}
+@media (min-width: 900px) {
+      .notesContainer{
+         gap: 40%;
+  } 
+}
+@media (min-width: 991px) {
+      .addNoteButton{
+    left: 8%;
+    bottom: -7%;
+}
+}
+@media (min-width: 1200px) {
+      .addNoteButton{
+    left: 10%;
+    bottom: -7%;
+}
+}

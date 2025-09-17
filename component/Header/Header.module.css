@@ -1,0 +1,57 @@
+.navar{
+    width: 95% !important;
+    border-bottom: 2px solid #212529;
+}
+.headerContainer{
+    width: 35% !important;
+    margin-bottom: 30px !important;
+    margin-right: 20px !important;
+    padding: 5px !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    background: linear-gradient(200deg, rgba(158, 20, 20, 0.4) 60%, #212529 40%);
+    border-top-left-radius: 30px; /* round top-left corner */
+    /* Cut the left side diagonally, but leave top corner rounded */
+    clip-path: polygon(
+    0 30px,    /* just below the rounded corner */
+    30px 0,    /* near top-left */
+    100% 0, 
+    100% 100%, 
+    0 100%
+  );
+}
+.navbarToggler{
+    color:yellow !important;
+    
+}
+.navItem{
+    
+    padding: 5px !important;
+    font-size: 0.5rem !important;
+     color:white !important;
+}
+.navLink{
+    color:white !important;
+}
+.navbarNavar{
+    display:flex !important;
+    gap: 30px !important;
+}
+.kommaLogo{
+    max-width: 15%;
+    height: auto;
+    margin-right: 10px;
+}
+.navbarContainer{
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbarBrand{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
