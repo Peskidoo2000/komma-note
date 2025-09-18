@@ -1,3 +1,6 @@
+body, html{
+  background-color: #ffffff !important;
+}
 .getStarted{
   background-color: rgb(158, 7, 19);
   color: white;
